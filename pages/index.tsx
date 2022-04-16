@@ -1,9 +1,27 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useState } from 'react'
 import InputField from '../components/InputField'
+import { Todo } from '../components/models/Todo'
+import TodoList from '../components/TodoList'
 
 
 const Home: NextPage = () => {
+  const [todo, setTodo] = useState<string>("")
+  const [todos, setTodos] = useState<Todo[]>([])
+  const handleAdd = (e:React.FormEvent) => {
+    e.preventDefault();
+    todo?setTodos(
+      [...todos,
+        {id:Date.now(),
+          todo:todo,
+          isDone:false
+        }
+      ]):null;
+    setTodo("");
+    setTimeout( () => console.log(todo),0 );
+  }
+
   return (
     <div className='container'>
       <Head>
@@ -12,7 +30,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className='heading'>Task List App</h1>
-      <InputField/>
+      <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      <TodoList />
     </div>
   )
 }
