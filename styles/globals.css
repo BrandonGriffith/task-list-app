@@ -8,7 +8,7 @@ body{
   color: whitesmoke;
 }
 .container {
-  width: 800px;
+  width: 50%;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
@@ -34,11 +34,12 @@ body{
 }
 .input-box:focus {
   outline: none;
-  box-shadow: 0 0 10px 1000px rgb(38, 21, 77);
+  box-shadow: 0 0 10px 1000px rgb(38, 21, 77, 0.5);
 }
 .input-btn {
   position: absolute;
   height: 70%;
+  max-width: 20%;
   margin: 10px;
   border: 2px black;
   border-radius: 20px;
@@ -48,6 +49,7 @@ body{
   transition: 0.2s all;
   box-shadow: 0 0 20px black;
   white-space: nowrap;
+  overflow: hidden;
 }
 .input-btn:hover {
   background-color: rgb(51, 77, 77);
@@ -60,4 +62,42 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+.one-todo {
+  display: flex;
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: rgb(184, 112, 19);
+}
+.one-todo-text {
+  flex: 1;
+  padding: 10px;
+  font-size: 15px;
+}
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+@media (max-width: 1500px) {
+  .input {
+    width: 95%;
+  }
+  .container {
+    width: 95%;
+    flex-direction: column;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+.todo-edit-box {
+  flex: 1;
+  padding: 5px;
+  border: 2px black;
+  border-radius: 20px;
+  font-size: 18px;
 }

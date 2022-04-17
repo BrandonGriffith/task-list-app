@@ -16,7 +16,7 @@ const InputField: React.FC<InputProps> = ({todo, setTodo, handleAdd}:InputProps)
         value={todo} 
         onChange={(e)=>setTodo(e.target.value)} 
         />
-        <button type="submit" className="input-btn">Add Task</button>
+        <button type="submit" className="input-btn">Add</button>
     </form>
     )
 }
