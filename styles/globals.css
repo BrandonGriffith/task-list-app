@@ -34,7 +34,7 @@ body{
 }
 .input-box:focus {
   outline: none;
-  box-shadow: 0 0 10px 1000px black;
+  box-shadow: 0 0 10px 1000px rgb(38, 21, 77);
 }
 .input-btn {
   position: absolute;
@@ -54,4 +54,10 @@ body{
 }
 .input-btn:active {
   transform: scale(0.8);
+}
+.todos {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

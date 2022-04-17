@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     todo?setTodos(
       [...todos,
         {id:Date.now(),
-          todo:todo,
+          content:todo,
           isDone:false
         }
       ]):null;
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       </Head>
       <h1 className='heading'>Task List App</h1>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
-      <TodoList />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   )
 }
