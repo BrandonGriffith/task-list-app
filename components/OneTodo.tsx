@@ -43,7 +43,7 @@ const OneTodo: React.FC<OneTodoProps> = ({todo,todos,setTodos}:OneTodoProps) => 
             ( <span className="one-todo-text"> {todo.content} </span> ) 
         )
         }
-        <div>
+        <div className="one-todo-icons">
             {
                 edit?
                 (<span></span>)

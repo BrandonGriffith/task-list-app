@@ -31,10 +31,12 @@ body{
   padding: 20px;
   font-size: 20px;
   transition: 0.2s;
+  padding-right: 10%;
 }
 .input-box:focus {
   outline: none;
   box-shadow: 0 0 10px 1000px rgb(38, 21, 77, 0.5);
+  padding-right: 20%;
 }
 .input-btn {
   position: absolute;
@@ -70,6 +72,7 @@ body{
   padding: 20px;
   margin-top: 15px;
   background-color: rgb(184, 112, 19);
+  overflow-wrap: break-word;
 }
 .one-todo-text {
   flex: 1;
